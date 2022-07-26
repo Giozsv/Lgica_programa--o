@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var loginCadastrado = "Giovanna";
+    var senhaCadastrada = "gi123";
+
+    var maxTentativas = 3;
+    var tentativaAtual = 1;
+
+    while(tentativaAtual <= maxTentativas) {
+
+        var loginInformado = prompt("Informe login");
+        var senhaInformada = prompt("Informe senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+
+            alert("Bem vindo, " + loginInformado);
+
+            tentativaAtual = maxTentativas;
+
+        } else {
+
+            if (tentativaAtual == 3) {
+                alert("Número permitido de tentativas ultrapassado!");
+
+            }else{
+                alert("Login inválido. Tente novamente");
+            }
+        }
+
+         tentativaAtual = tentativaAtual + 1
+    }
+
+</script>
